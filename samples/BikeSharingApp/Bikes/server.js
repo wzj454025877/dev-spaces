@@ -1,5 +1,6 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
+////
 
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
@@ -231,8 +232,6 @@ app.get('/api/bikes/:bikeId', function(req, res) {
         }
 
         var theBike = result;
-        // Hard code image url *FIX ME*
-        theBike.imageUrl = "/static/logo.svg";
         theBike.id = theBike._id;
         delete theBike._id;
 
